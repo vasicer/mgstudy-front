@@ -91,7 +91,7 @@ export default function Home() {
       if (seen.has(entry.question)) continue;
       seen.add(entry.question);
       unique.push(entry);
-      if (unique.length >= 4) break;
+      if (unique.length >= 3) break;
     }
     setReviewItems(unique);
   }, []);
