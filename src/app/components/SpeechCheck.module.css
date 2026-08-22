@@ -1,0 +1,72 @@
+.voiceBox {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--card-border);
+  text-align: center;
+}
+
+.micButton {
+  padding: 10px 20px;
+  border: 1px solid var(--input-border);
+  border-radius: 999px;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.micButtonActive {
+  border-color: #ff6b6b;
+  background: #fdecec;
+  color: #c23b3b;
+  animation: mic-pulse 1s ease-in-out infinite;
+}
+
+@keyframes mic-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(255, 107, 107, 0);
+  }
+}
+
+.transcript {
+  margin-top: 12px;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.voiceCorrect {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--correct-text);
+}
+
+.wrongBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 2px solid var(--wrong-strong-text, var(--wrong-text));
+  background: var(--wrong-strong-bg, var(--wrong-bg));
+  color: var(--wrong-strong-text, var(--wrong-text));
+  font-size: 15px;
+  font-weight: 800;
+  box-shadow: 0 0 0 3px rgba(214, 31, 31, 0.18);
+}
+
+.unsupported {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--card-border);
+  font-size: 13px;
+  color: var(--text-secondary);
+}

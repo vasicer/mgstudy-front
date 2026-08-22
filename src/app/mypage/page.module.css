@@ -1,0 +1,220 @@
+.page {
+  --bg-1: #eaf6ff;
+  --bg-2: #a9ddf7;
+  --text-primary: #1f1f1f;
+  --text-secondary: #5f6368;
+  --card-bg: #ffffff;
+  --card-border: #e6e8f0;
+  --input-bg: #f4f5f9;
+  --input-border: #e2e4ee;
+  --correct-text: #2e6b34;
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 32px 20px 80px;
+  font-family: var(--font-geist-sans);
+  background: radial-gradient(circle at 50% 0%, var(--bg-2) 0%, var(--bg-1) 55%);
+}
+
+.title {
+  align-self: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.profileCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  max-width: 420px;
+  padding: 28px 24px;
+  border-radius: 22px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 12px 32px rgba(66, 71, 112, 0.08);
+}
+
+.avatarDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4285f4, #9168c0);
+  font-size: 44px;
+}
+
+.label {
+  align-self: flex-start;
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text-primary);
+  font-size: 15px;
+  text-align: center;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #9168c0;
+  background: var(--card-bg);
+}
+
+.avatarGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.avatarOption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 2px solid var(--input-border);
+  background: var(--input-bg);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.avatarOptionSelected {
+  border-color: #9168c0;
+  background: var(--card-bg);
+  box-shadow: 0 0 0 3px rgba(145, 104, 192, 0.2);
+}
+
+.saveButton {
+  margin-top: 18px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #4285f4, #9168c0);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.savedMessage {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--correct-text);
+}
+
+.historySection {
+  width: 100%;
+  max-width: 640px;
+}
+
+.sectionTitle {
+  margin-bottom: 12px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.emptyText {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.inlineLink {
+  font-weight: 700;
+  color: #4285f4;
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+}
+
+.historyItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 8px 20px rgba(66, 71, 112, 0.06);
+}
+
+.historyInfo {
+  min-width: 0;
+}
+
+.historyQuestion {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.historyMeta {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.retryButton {
+  flex-shrink: 0;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #4285f4, #9168c0);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.backLink {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 500px) {
+  .historyItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --bg-1: #0b1220;
+    --bg-2: #142a44;
+    --text-primary: #ededed;
+    --text-secondary: #9aa0ab;
+    --card-bg: #16171f;
+    --card-border: #262838;
+    --input-bg: #1d1f2b;
+    --input-border: #2b2d3d;
+    --correct-text: #7fd996;
+  }
+}

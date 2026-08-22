@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  max-width: 780px;
+}
+
+.greeting {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.link {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.linkPrimary {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #4285f4, #9168c0);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.linkButton {
+  padding: 6px 8px;
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
